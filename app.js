@@ -27,4 +27,11 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 	var diceDOM = document.querySelector('.dice');
 	diceDOM.style.display = 'block';
 	diceDOM.src = 'dice-' + dice + '.png';
+
+	//Update score
+	if (dice != 1) {
+		roundScore += dice;
+		document.querySelector('#current-' + activePlayer).textContent = roundScore;
+	} else {
+	}
 });
